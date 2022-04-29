@@ -1,18 +1,18 @@
 {% set name = "motifcluster" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b63509e0f970a5fc67d41ec77e17b1b49cdd0576491754f2fcc91dac5f01ba39
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0bf311631c61c6fb1ab0040a414b438c997b2c3b33e8eab30d7b159bfa3263c6
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,13 +30,13 @@ test:
     - motifcluster
 
 about:
-  home: "https://github.com/WGUNDERWOOD/motifcluster"
+  home: https://github.com/WGUNDERWOOD/motifcluster
   license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE
-  summary: "Motif-Based Spectral Clustering of Weighted Directed Networks"
-  doc_url: "https://motifcluster.readthedocs.io"
-  dev_url: "https://github.com/WGUNDERWOOD/motifcluster"
+  summary: Motif-Based Spectral Clustering of Weighted Directed Networks
+  doc_url: https://motifcluster.readthedocs.io
+  dev_url: https://github.com/WGUNDERWOOD/motifcluster
 
 extra:
   recipe-maintainers:
