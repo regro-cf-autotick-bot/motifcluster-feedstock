@@ -1,5 +1,5 @@
 {% set name = "motifcluster" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0bf311631c61c6fb1ab0040a414b438c997b2c3b33e8eab30d7b159bfa3263c6
+  sha256: b17d9729b76d468d5834f1be2df7125ee929ed7f38d19cf57c58a7c8fd01b197
 
 build:
   number: 0
